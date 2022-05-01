@@ -2,7 +2,7 @@
 </script>
 
 <template>
-vue-chai
+<router-view />
 </template>
 
 <style>

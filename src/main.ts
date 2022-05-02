@@ -1,7 +1,15 @@
-import { createApp } from 'vue'
+import { createApp, initCustomFormatter } from 'vue'
 import App from './App.vue'
-import router from './router'
+import router, { setupRouter } from './router'
 
-const app = createApp(App)
-app.use(router)
-app.mount('#app')
+
+
+async function init() {
+  const app = createApp(App)
+  setupRouter(app)
+  // app.use(router)
+  await router.isReady()
+  app.mount('#app')
+}
+
+init()

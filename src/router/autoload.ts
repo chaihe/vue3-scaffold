@@ -37,7 +37,7 @@ function getRouteByView(file: string, layout: { [key: string]: any }) {
     component: layout.default
   } as RouteRecordRaw
 
-  return route
+  return Object.assign(route, layout.default.route)
 }
 
 export default getRoutes() 

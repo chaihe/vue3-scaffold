@@ -2,8 +2,6 @@ import { RouteRecordRaw } from "vue-router";
 
 const layouts = import.meta.globEager('../layouts/*.vue')
 const views = import.meta.globEager('../views/**/*.vue')
-console.log(views);
-
 
 function getRoutes() {
   const layoutRoutes = [] as RouteRecordRaw[]
@@ -27,7 +25,6 @@ function getChildrenRoutes(route: RouteRecordRaw) {
 }
 
 function getRouteByView(file: string, layout: { [key: string]: any }) {
-  console.log(file, layout);
   // console.log(file.split('/').pop()?.split('.')[0]);
   // console.log(file.match(/\.\.\/layouts\/(?<name>.+?)\.vue/i)?.groups?.name);
   const name = file.replace(/.+layouts\/|.+views\/|\.vue/gi, '')

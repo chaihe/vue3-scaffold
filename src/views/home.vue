@@ -1,7 +1,7 @@
 <!-- home -->
 <template>
   <div class="">
-    chai-home
+    <h2>chai-home</h2>
   </div>
 </template>
 

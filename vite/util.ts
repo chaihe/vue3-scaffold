@@ -1,6 +1,6 @@
 import * as _ from "lodash";
 
-export function parseEnv(env: Record<string, any>) {
+export function parseEnv(env: Record<string, any>): ViteEnv {
   const envs: any = _.cloneDeep(env)
 
   Object.entries(env).forEach(([key, value]) => {

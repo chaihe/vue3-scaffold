@@ -4,5 +4,15 @@
     "module": "esnext",
     "moduleResolution": "node"
   },
-  "include": ["vite.config.ts", "vite/**/*.ts"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "vite.config.ts",
+    "vite/**/*.ts",
+    "mock/**/*.ts",
+    "typesd/**/*.d.ts",
+    "typesd/**/*.ts"
+  ],
 }

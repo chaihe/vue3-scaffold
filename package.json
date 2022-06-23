@@ -8,8 +8,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "babylon-yd": "^1.0.0",
+    "babylonjs": "^5.10.0",
     "lodash": "^4.17.21",
+    "lottie-web": "^5.9.4",
+    "mitt": "^3.0.0",
     "mockjs": "^1.1.0",
+    "npm_chai": "^1.0.0",
     "vue": "^3.2.25",
     "vue-router": "4"
   },

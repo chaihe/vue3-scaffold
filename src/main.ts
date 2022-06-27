@@ -1,16 +1,21 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import { setupPlugins } from './plugins'
-import router, { setupRouter } from './router'
-
+import { createApp } from "vue";
+import App from "./App.vue";
+import { setupPlugins } from "./plugins";
+import router, { setupRouter } from "./router";
+import mitt from "mitt";
 
 async function init() {
-  const app = createApp(App)
-  setupRouter(app)
-  setupPlugins(app)
+  const app = createApp(App);
+  setupRouter(app);
+  setupPlugins(app);
   // app.use(router)
-  await router.isReady()
-  app.mount('#app')
+  window.CHAI = {
+    CHAI: "chai",
+    ZHI: "zhi",
+  };
+  window.YDMITTER = mitt();
+  await router.isReady();
+  app.mount("#app");
 }
 
-init()
+init();

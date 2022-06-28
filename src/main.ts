@@ -9,10 +9,6 @@ async function init() {
   setupRouter(app);
   setupPlugins(app);
   // app.use(router)
-  window.CHAI = {
-    CHAI: "chai",
-    ZHI: "zhi",
-  };
   window.YDMITTER = mitt();
   await router.isReady();
   app.mount("#app");

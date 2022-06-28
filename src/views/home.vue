@@ -9,24 +9,24 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-import BabylonYD from "babylon-yd";
 import { Scheme } from "../enum/scheme.js";
+import BabylonYD from "babylon-yd";
 
 const renderCanvas = ref(null);
 let yd: any = null;
 
 onMounted(() => {
-  const ydMitter = window.YDMITTER;
-  console.log("this is ", window);
-  console.log("this issss ", window.YDMITTER);
-  console.log("this issss ", window.CHAI);
   yd = new BabylonYD(renderCanvas.value);
-  ydMitter.on(Scheme.NeedLogin, (e) => console.log("foo", e));
-  ydMitter.on("*", (type, e) => console.log(type, e));
+  initMitt();
 });
+
+function initMitt() {
+  const ydMitter = window.YDMITTER;
+  ydMitter.on(Scheme.NeedLogin, (e) => console.log(Scheme.NeedLogin, e));
+  ydMitter.on("*", (type, e) => console.log(type, e));
+}
+
 function btnEmitClick() {
-  console.log("btnEmitClick");
-  // yd.ydScheme();
   yd.ydSchemeEmit();
 }
 </script>

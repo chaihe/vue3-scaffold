@@ -12,7 +12,6 @@ console.log(user);
 </script>
 
 <template>
-  app.vue
   <router-view />
 </template>
 

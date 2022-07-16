@@ -10,20 +10,13 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "esModuleInterop": true,
-    "lib": [
-      "esnext",
-      "dom"
-    ],
+    "lib": ["esnext", "dom"],
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "#/*": [
-        "typesd/*"
-      ]
-    },
+      "@/*": ["./src/*"],
+      "#/*": ["typesd/*"]
+    }
   },
   "include": [
     "src/**/*.ts",
